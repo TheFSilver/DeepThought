@@ -5,7 +5,9 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-
+gem "jquery-rails"
+gem 'jquery-ui-rails'
+gem 'bootstrap'
 gem 'bcrypt'
 
 group :development, :test do
