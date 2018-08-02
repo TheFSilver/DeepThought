@@ -1,10 +1,21 @@
-<% provide(:title, 'All users') %>
-<h1>All users</h1>
+<section class="Index">
+  <div class="container">
+    <% provide(:title, 'All users') %>
+    <h1>Liste des Utilisateurs</h1>
+    <br>
+    <center>
+      <div class="row" height:"400px" style='overflow:scroll'>
+        <div class="col-3"></div>
+        <div class="col-6 liste">
+          <% @users.each do |user| %>
+          <p>Utilisateur n°: <%= user.id%></p>
+          <%= link_to user.email, user %>
+          <hr style="border: 1px solid white">
+          <% end %>
+        </div>
+        <div class="col-3"></div>
+      </div>
+  </center>
+  </div>
 
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to user.email, user %>
-    </li>
-  <% end %>
-</ul>
+</section>

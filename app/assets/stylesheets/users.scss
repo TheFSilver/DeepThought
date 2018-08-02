@@ -8,3 +8,32 @@ section.CTA {
   background-size: 100% auto;
   color: white;
 }
+section.Index {
+  padding-top: 70px;
+  height: 550px;
+  background-image: url(asset-path("bg.jpg"));
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: white;
+  a{
+    color: white;
+  }
+  .info{
+    padding-top: 30px;
+  }
+}
+
+.footer {
+  padding-top: 15px;
+}
+  .right {
+    text-align: right;
+  }
+
+.IMG {
+  border-radius: 400px;
+}
+.liste {
+    overflow: scroll;
+    height: 350px;
+}

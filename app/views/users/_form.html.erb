@@ -1,14 +1,26 @@
-<%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages', object: @user %>
+<!--Formulaire Form_for Ruby fx Bootstrap-->
+<div class="form">
 
+  <!--Déclaration de début de fomulaire, désignation de l'action dans le controller-->
+<%= form_for(@user) do |f| %>
+<%= render 'shared/error_messages', object: @user %>
+  <div class="form-group">
   <%= f.label :email %>
   <%= f.email_field :email, class: 'form-control' %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password, class: 'form-control' %>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
-<% end %>
+  <!--Commentaire d'input-->
+  <small id=“emailHelp” class=“form-text text-muted”>T'as oublié ton email ? <a href="/thgttg-secret">Clique ici</a> 😉</small>
+  </div>
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+  <!--Commentaire d'input-->
+  <small class=“form-text text-muted”>Évite de mettre des espaces 😉</small>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
+  <small class=“form-text text-muted”>L’adresse e-mail doit être valide</small>
+</div>
+  <%= f.submit "Enregistrer", class: "btn btn-primary" %> <br>
+  <% end %>
+</div>

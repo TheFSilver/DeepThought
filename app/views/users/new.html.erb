@@ -1,15 +1,24 @@
 <section class="CTA">
-  <br>
-  <% provide(:title, 'Sign up') %>
-  <h1>Sign up</h1>
 
-  <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4 form">
-        <%= render 'form' %>
-          <p>Already got an account? <%= link_to "Log in!", "/sessions/new" %></p>
+  <div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+        <div class="col-6" style="padding: 20px 50px ">
+          <div class="container">
+            <% provide(:title, 'Sign up') %>
+            <h1>Inscription</h1>
+            <%= render 'form' %>
+            <hr style="border : 1px solid white">
+            <p>Tu as déjà un compte ?     <%= link_to "Log toi !", "/sessions/new", class: 'btn btn-sm btn-primary' %></p>
+          </div>
+        </div>
+      <div class="col-3"></div>
     </div>
-    <div class="col-md-4"></div>
   </div>
+
+
+
+
+
 
 </section>
