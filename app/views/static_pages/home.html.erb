@@ -6,9 +6,12 @@
         <h1>Bienvenue !</h1>
         <br>
         <br>
-        <h3>Ici, tu peux retrouver les moussaillons 🎓</h3>
-        <br>
+        <h3>Ici, tu peux retrouver les moussaillons ��</h3>
+        <% if logged_in? %>
+          <br>
+        <% else %>
           <%= link_to "Sign up", new_user_path, class: "btn btn-lg btn-primary"  %>
+        <% end %>
       </div>
       <div class="col-md-2"></div>
     </div>
